@@ -42,7 +42,7 @@
                         <a href="/Chombers" class="nav-item nav-link">chambres</a>
                         <a href="/Contact" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">réservez maintenant<i class="fa fa-arrow-right ms-3"></i></a>
+                    <a href="/Login" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Connexion<i class="fa fa-arrow-right ms-3"></i></a>
                 </div>
             </nav>
         </div>

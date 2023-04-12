@@ -54,7 +54,7 @@
                     <div class="p-3" style="max-width: 700px;">
                         <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Profitez d'un meilleur moment</h6>
                         <h1 class="display-3 text-white mb-4 animated slideInDown">Découvrez Votre hôtel La Chambotte</h1>
-                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Réserver</a>
+                        <a href="/Reserver" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Réserver</a>
                     </div>
                 </div>
             </div>
