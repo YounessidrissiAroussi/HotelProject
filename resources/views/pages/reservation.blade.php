@@ -18,6 +18,7 @@
 
 <!-- Template Stylesheet -->
 <link href="{{asset('css/style.css')}}" rel="stylesheet">
+<title>Reservation</title>
 @endsection
 @section('script')
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -50,7 +51,7 @@
     </div>
     <!-- Page Header End -->
     <!-- Booking Start -->
-    <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.2s">
         <div class="container">
             <div class="bg-white shadow" style="padding: 35px;">
                 <div class="row g-2">
@@ -59,34 +60,54 @@
                             <div class="col-md-3">
                                 <div class="date" id="date1" data-target-input="nearest">
                                     <input type="text" class="form-control datetimepicker-input"
-                                        placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
+                                        placeholder="Date d'arrivée" data-target="#date1" data-toggle="datetimepicker" />
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="date" id="date2" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" placeholder="Check out" data-target="#date2" data-toggle="datetimepicker"/>
+                                    <input type="text" class="form-control datetimepicker-input" placeholder="Date de départ" data-target="#date2" data-toggle="datetimepicker"/>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <select class="form-select">
-                                    <option selected>Adult</option>
-                                    <option value="1">Adult 1</option>
-                                    <option value="2">Adult 2</option>
-                                    <option value="3">Adult 3</option>
+                                    <option selected>Adultes</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
                                 </select>
                             </div>
                             <div class="col-md-3">
                                 <select class="form-select">
-                                    <option selected>Child</option>
-                                    <option value="1">Child 1</option>
-                                    <option value="2">Child 2</option>
-                                    <option value="3">Child 3</option>
+                                    <option selected>Enfants</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option> 
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2">
                         <button class="btn btn-primary w-100">Réserver</button>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="email" id="email1" data-target-input="nearest">
+                            <input type="email" class="form-control datetimepicker-input"
+                                placeholder="e-mail" data-target="#email1" />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="Nomcomplet" id="Nomcomplet2" data-target-input="nearest">
+                            <input type="text" class="form-control" placeholder="Nom complet" data-target="#Nomcomplet2" />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="CIN" id="CIN" data-target-input="nearest">
+                            <input type="text"class="form-control" placeholder="Numéro de la carte national" data-target="#CIN"/>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 <div class="container-fluid bg-dark px-0">
     <div class="row gx-0">
         <div class="col-md-3 bg-dark d-none d-lg-block">
-            <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+            <a href="/" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                 <h1 class="m-0 text-primary text-uppercase">La Chambotte</h1>
             </a>
         </div>
@@ -42,7 +42,7 @@
                         <a href="/Chombers" class="nav-item nav-link">chambres</a>
                         <a href="/Contact" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="/Login" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Connexion<i class="fa fa-arrow-right ms-3"></i></a>
+                    <a href="/Reserver" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Réserver maintenant<i class="fa fa-arrow-right ms-3"></i></a>
                 </div>
             </nav>
         </div>

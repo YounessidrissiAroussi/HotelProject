@@ -31,6 +31,3 @@ Route::get('/Contact', function () {
 Route::get('/Reserver', function () {
     return view('pages.reservation');
 });
-Route::get('/Login', function () {
-    return view('pages.login');
-});
