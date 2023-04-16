@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
-            $table->string('CIN');
+            $table->string('CIN')->nullable();
             $table->string('Nom');
-            $table->string('Phone');
+            $table->string('Phone')->nullable();
             $table->string('Email')->nullable();
-            $table->enum("type",["celibataire", "encouple"]);
+            $table->enum("type",["celibataire", "encouple"])->nullable();
             $table->timestamps();
         });
     }

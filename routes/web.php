@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ReservationsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,8 +28,13 @@ Route::get('/Chombers', function () {
 Route::get('/Contact', function () {
     return view('websitepages.contact');
 });
-Route::get('/Reserver', function () {
-    return view('websitepages.reservation');
+Route::controller(ReservationsController::class)->group(function(){
+    Route::get('/Reserver', 'create');
+    Route::post('/Reserver', 'store');
+
 });
 
 
+Route::get('/Add' , function(){
+    return view('app');
+});

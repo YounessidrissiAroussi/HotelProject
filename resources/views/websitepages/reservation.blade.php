@@ -41,8 +41,8 @@
                 <h1 class="display-3 text-white mb-3 animated slideInDown">Réserver</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center text-uppercase">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        {{-- <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li> --}}
                         <li class="breadcrumb-item text-white active" aria-current="page">Réserver</li>
                     </ol>
                 </nav>
@@ -53,23 +53,24 @@
     <!-- Booking Start -->
     <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.2s">
         <div class="container">
+            <form action="/Reserver" method="POST">
+                @csrf
             <div class="bg-white shadow" style="padding: 35px;">
                 <div class="row g-2">
                     <div class="col-md-10">
                         <div class="row g-2">
                             <div class="col-md-3">
-                                <div class="date" id="date1" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input"
-                                        placeholder="Date d'arrivée" data-target="#date1" data-toggle="datetimepicker" />
+                                <div class="Nomcomplet" id="Nomcomplet2" data-target-input="nearest">
+                                    <input type="text" class="form-control" name="Nom" placeholder="Nom complet" data-target="#Nomcomplet2" />
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <div class="date" id="date2" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" placeholder="Date de départ" data-target="#date2" data-toggle="datetimepicker"/>
+                                <div class="date" id="date2">
+                                    <input type="date" class="form-control" name="DateDepart" placeholder="Date de départ" />
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <select class="form-select">
+                                <select class="form-select" name="Adults">
                                     <option selected>Adultes</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -79,8 +80,8 @@
                                 </select>
                             </div>
                             <div class="col-md-3">
-                                <select class="form-select">
-                                    <option selected>Enfants</option>
+                                <select class="form-select" name="Enfants">
+                                    <option selected value="0">Enfants</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -91,26 +92,11 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <button class="btn btn-primary w-100">Réserver</button>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="email" id="email1" data-target-input="nearest">
-                            <input type="email" class="form-control datetimepicker-input"
-                                placeholder="e-mail" data-target="#email1" />
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="Nomcomplet" id="Nomcomplet2" data-target-input="nearest">
-                            <input type="text" class="form-control" placeholder="Nom complet" data-target="#Nomcomplet2" />
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="CIN" id="CIN" data-target-input="nearest">
-                            <input type="text"class="form-control" placeholder="Numéro de la carte national" data-target="#CIN"/>
-                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Réserver</button>
                     </div>
                 </div>
             </div>
+        </form>
         </div>
     </div>
     <!-- Booking End -->
