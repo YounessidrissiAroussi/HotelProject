@@ -14,20 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pages.home');
+    return view('websitepages.home');
 });
 Route::get('/Apropos', function () {
-    return view('pages.about');
+    return view('websitepages.about');
 });
 Route::get('/Service', function () {
-    return view('pages.service');
+    return view('websitepages.service');
 });
 Route::get('/Chombers', function () {
-    return view('pages.rooms');
+    return view('websitepages.rooms');
 });
 Route::get('/Contact', function () {
-    return view('pages.contact');
+    return view('websitepages.contact');
 });
 Route::get('/Reserver', function () {
-    return view('pages.reservation');
+    return view('websitepages.reservation');
 });
+
+
