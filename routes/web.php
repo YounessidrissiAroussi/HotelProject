@@ -36,5 +36,5 @@ Route::controller(ReservationsController::class)->group(function(){
 
 
 Route::get('/Add' , function(){
-    return view('app');
+    return view('application.clients.index');
 });

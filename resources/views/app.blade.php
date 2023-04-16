@@ -10,14 +10,15 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sidebars/">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('head')
   </head>
   <body>
     @include('partials.sidebar')
         <section class="mx-5">
-            tables Here
+            @yield('main')
         </section>
       </main>
     <script src="{{asset('assets/dist/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('js/dashbord.js')}}"></script>
+    <script src="{{asset('js/sidebar.js')}}"></script>
   </body>
 </html>
