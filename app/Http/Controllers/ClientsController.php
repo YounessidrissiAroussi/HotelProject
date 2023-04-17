@@ -13,7 +13,12 @@ class ClientsController extends Controller
      */
     public function index()
     {
-        //
+        if(request('search1')){
+           $clients = Clients::where('CIN' , 'like' , '%'.request('search1').'%')->get();
+        }else{
+            $clients = Clients::all();
+        }
+         return view('application.clients.index',compact('clients'));
     }
 
     /**
@@ -21,7 +26,7 @@ class ClientsController extends Controller
      */
     public function create()
     {
-        //
+        return view('application.clients.create');
     }
 
     /**
@@ -29,7 +34,21 @@ class ClientsController extends Controller
      */
     public function store(StoreClientsRequest $request)
     {
-        //
+        $request->validate([
+            'CIN' => 'required|min:4|max:9|unique:clients',
+            'Nom' => 'required|min:3|max:20',
+            'Phone' => 'required|min:3|max:10',
+            'Email' => 'required|email|unique:clients',
+            'type' => 'required',
+        ]);
+        Clients::create([
+            "CIN" => $request->CIN,
+            "Nom" => $request->Nom,
+            "Phone" => $request->Phone,
+            "Email" => $request->Email,
+            "type" => $request->type,
+        ]);
+            return redirect('/Clients/Ajouter')->with('success','Client Ajouter avec success...');
     }
 
     /**
@@ -37,7 +56,7 @@ class ClientsController extends Controller
      */
     public function show(Clients $clients)
     {
-        //
+       //
     }
 
     /**
@@ -45,7 +64,7 @@ class ClientsController extends Controller
      */
     public function edit(Clients $clients)
     {
-        //
+        return view('application.clients.edit',compact('clients'));
     }
 
     /**
@@ -53,7 +72,20 @@ class ClientsController extends Controller
      */
     public function update(UpdateClientsRequest $request, Clients $clients)
     {
-        //
+        $request->validate([
+            'CIN' => 'required|min:4|max:9|unique:clients',
+            'Nom' => 'required|min:3|max:20',
+            'Phone' => 'required|min:3|max:10',
+            'Email' => 'required|email|unique:clients',
+            'type' => 'required',
+        ]);
+            $clients->CIN = $request->CIN;
+            $clients->Nom = $request->Nom;
+            $clients->Phone = $request->Phone;
+            $clients->Email = $request->Email;
+            $clients->type = $request->type;
+        $clients->update();
+        return redirect('/Clients')->with('success','Client Modifier avec success...');
     }
 
     /**
@@ -61,6 +93,7 @@ class ClientsController extends Controller
      */
     public function destroy(Clients $clients)
     {
-        //
+        $clients->delete();
+        return redirect('/Clients')->with('success','Client à Supprimer');
     }
 }

@@ -65,19 +65,19 @@
         <li class="nav-item">
           <a href="#" class="nav-link active" aria-current="page">
             <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
-            Home
+            Accueil
           </a>
         </li>
         <li>
           <a href="#" class="nav-link text-white">
             <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-            Dashboard
+            Reservation
           </a>
         </li>
         <li>
           <a href="#" class="nav-link text-white">
             <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-            Orders
+            Chombers
           </a>
         </li>
         <li>
@@ -87,9 +87,9 @@
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link text-white">
+          <a href="/Clients" class="nav-link text-white">
             <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
-            Customers
+            Clients
           </a>
         </li>
       </ul>

@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReservationsController;
+use App\Http\Controllers\ClientsController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,7 +37,11 @@ Route::controller(ReservationsController::class)->group(function(){
 
 });
 
-
-Route::get('/Add' , function(){
-    return view('application.clients.index');
+Route::controller(ClientsController::class)->group(function(){
+    Route::get('/Clients','index');
+    Route::get('/Clients/Ajouter','create');
+    Route::post('/Clients/Ajouter','store');
+    Route::get('/Clients/{clients}/Modifier','edit');
+    Route::put('/Clients/{clients}/Modifier','update');
+    Route::delete('/Clients/{clients}','destroy');
 });
