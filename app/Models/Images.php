@@ -10,12 +10,15 @@ use App\Models\chambers;
 class Images extends Model
 {
     use HasFactory;
-
+    protected $fillable = [
+        'chamber_id',
+        'url',
+    ];
     public function publications(){
         return $this->belongsTo(Publications::class);  
     }
     public function chambers(){
-        return $this->belongsTo(chambers::class);  
+        return $this->belongsTo(chambers::class , 'id');  
     }
 
 }

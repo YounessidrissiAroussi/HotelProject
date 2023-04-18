@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReservationsController;
 use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\ChambersController;
 
 
 /*
@@ -44,4 +45,14 @@ Route::controller(ClientsController::class)->group(function(){
     Route::get('/Clients/{clients}/Modifier','edit');
     Route::put('/Clients/{clients}/Modifier','update');
     Route::delete('/Clients/{clients}','destroy');
+});
+
+Route::controller(ChambersController::class)->group(function(){
+    Route::get('/Chambers','index');
+    Route::get('/Chambers/Ajouter','create');
+    Route::post('/Chambers/Ajouter','store');
+    Route::delete('/Chambers/{chambers}','destroy');
+    Route::get('/Chambers/{chambers}/Modifier' , 'edit');
+    Route::put('/Chambers/{chambers}/Modifier' , 'update');
+
 });

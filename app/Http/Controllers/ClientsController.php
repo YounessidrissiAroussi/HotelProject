@@ -94,6 +94,6 @@ class ClientsController extends Controller
     public function destroy(Clients $clients)
     {
         $clients->delete();
-        return redirect('/Clients')->with('success','Client à Supprimer');
+        return redirect('/Clients')->with('success','Client à Bien Supprimer');
     }
 }

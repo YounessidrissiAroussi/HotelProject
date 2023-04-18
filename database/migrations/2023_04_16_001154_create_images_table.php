@@ -16,11 +16,11 @@ return new class extends Migration
             $table->foreignId('chamber_id')
                 ->constrained()
                 ->onUpdate('cascade')
-                ->onDelete('cascade');
-            $table->foreignId('publication_id')
-            ->constrained()
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
+                ->onDelete('cascade')->nullable();
+            // $table->foreignId('publication_id')
+            // ->constrained()
+            // ->onUpdate('cascade')
+            // ->onDelete('cascade')->default(0);
             $table->longText('url')->nullable();
             $table->timestamps();
         });
