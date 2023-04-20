@@ -1,7 +1,7 @@
 @extends('app')
 @section('main')
 
-<div class="prod">
+<div class="container">
     <div class="row mt-3">
         <hr>
         <div class="col-lg-5 text-center">
@@ -15,7 +15,7 @@
         <hr>
     </div>
 
-    {{-- <div class="row mt-1">
+    <div class="row mt-1">
         <div class="col-lg-5 mb-3 prod1 " >
             <div class="card shadow-sm border">
                 @if ( count($clients)==0)
@@ -157,7 +157,7 @@
                 @endif
             </div>
         </div>
-    </div> --}}
+    </div>
 </div>
 
 

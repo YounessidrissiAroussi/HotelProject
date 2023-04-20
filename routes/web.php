@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReservationsController;
 use App\Http\Controllers\ClientsController;
 use App\Http\Controllers\ChambersController;
+use App\Http\Controllers\homecontroller;
 
 
 /*
@@ -33,8 +34,10 @@ Route::get('/Contact', function () {
     return view('websitepages.contact');
 });
 Route::controller(ReservationsController::class)->group(function(){
+    //----------------------------
     Route::get('/Reserver', 'create');
     Route::post('/Reserver', 'store');
+    //---------------------
 
 });
 
@@ -54,5 +57,10 @@ Route::controller(ChambersController::class)->group(function(){
     Route::delete('/Chambers/{chambers}','destroy');
     Route::get('/Chambers/{chambers}/Modifier' , 'edit');
     Route::put('/Chambers/{chambers}/Modifier' , 'update');
+
+});
+Route::controller(homecontroller::class)->group(function(){
+    Route::get('/Acceuil','index');
+
 
 });
