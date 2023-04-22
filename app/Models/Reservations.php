@@ -9,11 +9,19 @@ use App\Models\DetailsReservation;
 class Reservations extends Model
 {
     use HasFactory;
-    
+    protected $fillable = [
+        'DateDepart',
+        'Adults',
+        'Enfants',
+        'status',
+        'Client_id'
+    ];
+
+
     public function clients(){
-        return $this->belongsTo(Clients::class);  
+        return $this->belongsTo(Clients::class);
     }
     public function DetailsReservations(){
-        return $this->belongsTo(DetailsReservation::class);  
+        return $this->belongsTo(DetailsReservation::class);
     }
 }

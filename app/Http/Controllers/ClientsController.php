@@ -1,99 +1,61 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Clients;
-use App\Http\Requests\StoreClientsRequest;
-use App\Http\Requests\UpdateClientsRequest;
+use Illuminate\Http\Request;
 
 class ClientsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         if(request('search1')){
-           $clients = Clients::where('CIN' , 'like' , '%'.request('search1').'%')->get();
+            $clients = Clients::where('CIN' , 'like' , '%'.request('search1').'%')->get();
+        }elseif(request('search2')){
+            $clients = Clients::where('Nom', 'like' , '%'.request('search2').'%')->get();
         }else{
-            $clients = Clients::all();
+            $clients = Clients::orderByDesc('created_at')->get();
         }
-         return view('application.clients.index',compact('clients'));
+        return view('clients.index',compact('clients'));
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        return view('application.clients.create');
+        return view('clients.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreClientsRequest $request)
+
+    public function store(Request $request)
     {
-        $request->validate([
-            'CIN' => 'required|min:4|max:9|unique:clients',
-            'Nom' => 'required|min:3|max:20',
-            'Phone' => 'required|min:3|max:10',
-            'Email' => 'required|email|unique:clients',
-            'type' => 'required',
-        ]);
-        Clients::create([
-            "CIN" => $request->CIN,
-            "Nom" => $request->Nom,
-            "Phone" => $request->Phone,
-            "Email" => $request->Email,
-            "type" => $request->type,
-        ]);
-            return redirect('/Clients/Ajouter')->with('success','Client Ajouter avec success...');
+        Clients::create($request->all());
+        return redirect('/clients')->with('success', 'Clients Bien Ajouté ');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Clients $clients)
+
+    public function show($id)
     {
-       //
+        return view("clients.show",["Clients"=>Clients::findOrFail($id)]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Clients $clients)
+
+    public function edit($id)
     {
-        return view('application.clients.edit',compact('clients'));
+        return view("clients.edit",["Clients"=>Clients::findOrFail($id),]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateClientsRequest $request, Clients $clients)
+
+    public function update(Request $request,$id)
     {
-        $request->validate([
-            'CIN' => 'required|min:4|max:9|unique:clients',
-            'Nom' => 'required|min:3|max:20',
-            'Phone' => 'required|min:3|max:10',
-            'Email' => 'required|email|unique:clients',
-            'type' => 'required',
-        ]);
-            $clients->CIN = $request->CIN;
-            $clients->Nom = $request->Nom;
-            $clients->Phone = $request->Phone;
-            $clients->Email = $request->Email;
-            $clients->type = $request->type;
-        $clients->update();
-        return redirect('/Clients')->with('success','Client Modifier avec success...');
+        $updateData = Clients::find($id);
+        $updateData->update($request->all());
+        return redirect("clients")->with('success', 'Clients modifié avec succès');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Clients $clients)
+
+    public function destroy(Request $request, $id)
     {
-        $clients->delete();
-        return redirect('/Clients')->with('success','Client à Bien Supprimer');
+        $updateData = Clients::find($id);
+        $updateData->delete($request->all());
+        return redirect('/clients')->with('success','Clients supprimer avec succès');
     }
 }

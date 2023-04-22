@@ -6,106 +6,78 @@ use App\Models\Chambers;
 use App\Http\Requests\StoreChambersRequest;
 use App\Http\Requests\UpdateChambersRequest;
 use Illuminate\Support\Facades\File;
-use App\Models\Images;
+use Illuminate\Http\Request;
 
 class ChambersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        $chambers = Chambers::all();
-        return view('application.chambers.index',compact('chambers'));
+        if(request('search1')){
+            $chambers = Chambers::where('NChambre' , 'like' , '%'.request('search1').'%')->get();
+        }else{
+            $chambers = Chambers::all();
+        }
+        return view('chambers.index',compact('chambers'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create()
     {
-        return view('application.chambers.create');
+        return view('chambers.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreChambersRequest $request)
+
+    public function store(Request $request)
     {
         $request->validate([
             'NChambre' => 'required|min:1|integer|unique:chambers',
             'titre' => 'required',
             'Description' => 'required',
             'prix' => 'required|integer',
-            'url' => 'required',
+            'images' => 'required',
         ]);
-
         $chambers = new Chambers();
         $chambers->NChambre = $request->NChambre;
         $chambers->titre = $request->titre;
         $chambers->Description = $request->Description;
         $chambers->prix = $request->prix;
-        $chambers->save();
-        if($request->hasfile('url')){
-            foreach($request->file('url') as $image){
+        if($request->hasfile('images')){
+            foreach($request->file('images') as $image){
                 $name = $image->store('Images','public');
-                $image->move($name);  
+                $image->move($name);
                 $data[] = $name;
             }
         }
-            $images = new Images();
-            $images->chamber_id = $chambers->id;
-            $images->url = json_encode($data);
-            $images->save();
-                return redirect('/Chambers/Ajouter')->with('success' , 'Chambers a bien Ajouter avec success');
+        $chambers->images = json_encode($data);
+        $chambers->save();
+        return redirect('/chambers')->with('success' , 'Chambers a bien Ajouter avec success');
     }
 
-    public function show(Chambers $chambers)
+
+    public function show($id)
     {
-        //
+        return view("chambers.show",["chambers"=>Chambers::findOrFail($id)]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Chambers $chambers)
+
+    public function edit($id)
     {
-        return view('application.chambers.edit',compact('chambers'));
+        return view("chambers.edit",["chambers"=>Chambers::findOrFail($id)]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateChambersRequest $request, Chambers $chambers)
+
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'NChambre' => 'required|min:1|integer',
-            'titre' => 'required',
-            'Description' => 'required',
-            'prix' => 'required|integer',
-            // 'url' => 'required',
-        ]);
-            $chambers->NChambre = $request->NChambre;
-            $chambers->titre = $request->titre;
-            $chambers->Description = $request->Description;
-            $chambers->prix = $request->prix;
-            // $chambers->images = $request->url;
-        $chambers->update();
-        return redirect('/Chambers')->with('success','Chambers Modifier avec success...');
+        $updateData = Chambers::find($id);
+        $updateData->update($request->all());
+        return redirect("chambers")->with('success', 'Chambers modifié avec succès');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Chambers $chambers)
+
+    public function destroy(Request $request, $id)
     {
-        foreach($chambers->images as $image){
-            $data = json_decode($image->url);
-                $chambers->delete();
-                for($i = 0; $i < count($data); $i++){
-                    File::delete('storage/'.$data[$i]);   
-                }
-        }
-        return redirect('/Chambers')->with('success', 'Vous avez Supprimer');
+        $updateData = Chambers::find($id);
+        $updateData->delete($request->all());
+        return redirect('/chambers')->with('success','Chambers supprimer avec succès');
     }
 }

@@ -3,7 +3,7 @@
         <div class="row g-5">
             <div class="col-md-6 col-lg-4">
                 <div class="bg-primary rounded p-4">
-                    <a href="index.html"><h1 class="text-white text-uppercase mb-3">La Chambotte</h1></a>
+                    <a href="index.html"><h2 class="text-white text-uppercase mb-3">La Chambotte</h2></a>
                     <p class="text-white mb-0">
                         <a class="text-dark fw-medium" href="/">
                             <h3>Votre confort est le premier</h3>
@@ -46,7 +46,7 @@
         <div class="copyright">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="/">La Chambotte Hotel</a>, Tous droits réservés 2022-2023. 
+                    &copy; <a class="border-bottom" href="/">La Chambotte Hotel</a>, Tous droits réservés 2022-2023.
                     {{-- Designed By <a class="border-bottom" href="https://htmlcodex.com"></a> --}}
                 </div>
                 {{-- <div class="col-md-6 text-center text-md-end">

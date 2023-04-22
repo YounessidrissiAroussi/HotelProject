@@ -19,11 +19,11 @@
                 </div>
                 <div class="col-lg-5 px-5 text-end">
                     <div class="d-inline-flex align-items-center py-2">
-                        <a class="me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                        {{-- <a class="me-3" href=""><i class="fab fa-twitter"></i></a> --}}
+                        <a class="me-3" href="{{ url('home')}}"><i class="fab fa-facebook-f"></i></a>
+                        <a class="me-3" href=""><i class="fab fa-twitter"></i></a>
                         <a class="me-3" href=""><i class="fab fa-linkedin-in"></i></a>
                         <a class="me-3" href=""><i class="fab fa-instagram"></i></a>
-                        {{-- <a class="" href=""><i class="fab fa-youtube"></i></a> --}}
+                        <a class="" href=""><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="/" class="nav-item nav-link active">Accueil</a>
+                        <a href="/" class="nav-item nav-link ">Accueil</a>
                         <a href="/Apropos" class="nav-item nav-link">À propos</a>
                         <a href="/Service" class="nav-item nav-link">service</a>
                         <a href="/Chombers" class="nav-item nav-link">chambres</a>

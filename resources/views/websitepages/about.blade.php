@@ -2,7 +2,7 @@
 @section('head')
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Icon Font Stylesheet -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -66,16 +66,16 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
                     <h6 class="section-title text-start text-primary text-uppercase">À propos</h6>
-                    <h1 class="mb-4">Bienvenue à <span class="text-primary text-uppercase">La Chambotte</span></h1>
+                    <h2 class="mb-4">Bienvenue à <span class="text-primary text-uppercase">La Chambotte</span></h2>
                     <p class="mb-4 text-start">
                         Bienvenue dans Votre Hotel La Chambotte
-    
+
     fonctionnel et confort,  La Chambotte est idéalement situé au cœur de la ville D'imouzzer avec sa charmante architecture d’inspiration européenne.
-    
+
     La Chambotte imouzzer été conçu pour répondre aux diverses attentes et c’est ainsi qu’il comprend un hôtel de 4,3 étoiles doté de 20 chambres dont 1 suites et un Appart’hôtel de 6 appartements entièrement équipées.
-    
-    Il comprend aussi des espaces de restauration 
-    
+
+    Il comprend aussi des espaces de restauration
+
     La Chambotte imouzzer  vous propose 148 unités, toutes dotées entre autres de radiateur de chauffage, d’air conditionné, du Wi-Fi haut débit, d’un coffre-fort pour objets de valeur.
                     </p>
                     <div class="row g-3 pb-4">
