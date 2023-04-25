@@ -3,7 +3,7 @@
     <div class="row mt-3">
         <div class="row mt-3">
             <div class="col-lg-1">
-                <a class="btn btn-success" href="{{ url('clients/create')}}">+</a>
+                <a class="btn btn-success" href="{{ url('/Clients/create')}}">+</a>
             </div>
             <div class="col-lg-6">
                 <h3>List des Clients</h3>
@@ -12,12 +12,6 @@
                 <form class="d-flex" name="form1">
                     <input id="search-input" type="search" name="search1" id="search1" onchange="form1.submit()"
                     class="form-control " placeholder="Cin Clients...">
-                </form>
-            </div>
-            <div class="col-lg-2">
-                <form class="d-flex" name="form2">
-                    <input id="search-input" type="search" name="search2" id="search2" onchange="form2.submit()"
-                        class="form-control " placeholder="Nom Clients...">
                 </form>
             </div>
             <div class="col-lg-1">
@@ -47,11 +41,11 @@
                 <tr class="text-dark">
                     <td >{{ $index+1 }}</td>
                     <td class="pl-0">
-                        <div class="d-flex align-items-center">
+                        {{-- <div class="d-flex align-items-center">
                         <label class="custom-control ios-switch">
                             <input type="checkbox" class="ios-switch-control-input" {{$a->CIN ? "checked" : ""}}>
                             <span class="ios-switch-control-indicator"></span>
-                        </label>
+                        </label> --}}
                         <a>{{$a->Nom}}</a>
                         </div>
                     </td>
@@ -66,12 +60,12 @@
                     {{$a->type == Null ? "en-cours" : $a->type}}
                     </td>
                     <td class="text-center">
-                        <form action="{{ url('clients/'. $a->id) }}" method="POST">
+                        <form action="{{ url('Clients/'. $a->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <a href="{{url('clients/'. $a->id) }}"><i class="fa fa-eye" style="color:black" ></i></a>
-                            <a href="{{url('clients/'. $a->id .'/edit') }}"><i class="fa fa-edit" style="color:rgb(4, 12, 249)" ></i></a>
-                            <button class="border-0 bg-transparent text-danger" type="submit"><i class="fas fa-trash-alt"></i></button>
+                            <a href="{{url('Clients/'. $a->id) }}"><i class="fa fa-eye" style="color:black" ></i></a>
+                            <a href="{{url('Clients/'. $a->id .'/edit') }}"><i class="fa fa-edit" style="color:rgb(4, 12, 249)" ></i></a>
+                            <button class="border-0 mx-0 px-0 bg-transparent text-danger" type="submit"><i class="fas fa-trash-alt"></i></button>
                         </form>
                     </td>
                 </tr>

@@ -1,8 +1,6 @@
 @extends('app')
 @section('main')
-
-    {{-- <h1>Ajouter un adherent</h1> --}}
-    <div class="">
+    <div class="container">
         <div class="row mt-3">
             <div class="col-lg-1">
                 <a class="btn btn-success" href="{{ url('clients')}}"><i class="fas fa-arrow-circle-left" style="color:black"></i></a>

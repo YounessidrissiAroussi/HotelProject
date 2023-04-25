@@ -1,12 +1,9 @@
 @extends('app')
 @section('main')
-
-    {{-- <h1>Ajouter un adherent</h1> --}}
-
-    <div class="">
+    <div class="container">
         <div class="row mt-3">
             <div class="col-lg-1">
-                <a class="btn btn-success" href="{{ url('reservations')}}"><i class="fas fa-arrow-circle-left" style="color:black"></i></a>
+                <a class="btn btn-success" href="{{ url('/Reservations')}}"><i class="fas fa-arrow-circle-left" style="color:black"></i></a>
             </div>
             <div class="col-lg-11">
                 <p align="center"><b>Nouveau Reservation</b></p>
@@ -21,7 +18,7 @@
                 </ul>
             </div>
         @endif
-        <form class="d-flex flex-column" action="{{ url('reservations') }}" method="POST">
+        <form class="d-flex flex-column" action="{{ url('Reservations') }}" method="POST">
             @csrf
             <div class="form-group mb-3">
                 <label for="DateDepart">DateDepart:</label>
@@ -61,7 +58,7 @@
                 <select name="Client_id" required class="form-select">
                     <option selected disabled align='center'>----Choisez Clients----</option>
                     @foreach ($Clients as $emp)
-                        <option value={{ $emp->id }}>{{ $emp->Nom }} {{ $emp->CIN }} </option>
+                        <option value={{ $emp->id }}>{{ $emp->Nom }} </option>
                     @endforeach
                 </select>
             </div>

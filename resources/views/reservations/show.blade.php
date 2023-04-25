@@ -4,7 +4,7 @@
     <div class="pt-5">
         <div class="row mt-3">
             <div class="col-lg-1">
-                <a class="btn btn-success" href="{{ url('reservations')}}"><i class="fas fa-arrow-circle-left" style="color:black"></i></a>
+                <a class="btn btn-success" href="{{ url('Reservations')}}"><i class="fas fa-arrow-circle-left" style="color:black"></i></a>
             </div>
             <div class="col-lg-11">
                 <p align="center"><b> détail Reservations </b></p>

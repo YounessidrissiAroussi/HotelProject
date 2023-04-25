@@ -9,16 +9,15 @@ use App\Models\DetailsReservation;
 class Chambers extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'NChambre',
-        'titre',
-        'Description',
-        'prix', 
-        'images'
+    protected $fillable  = [
+        "NChambre",
+        "title",
+        "Description",
+        "Email",
+        "prix",
     ];
-
     public function images(){
-        return $this->HasMany(Images::class);
+        return $this->HasMany(Images::class , 'chamber_id');
     }
     public function DetailsReservations(){
         return $this->HasMany(DetailsReservation::class);

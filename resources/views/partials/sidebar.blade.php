@@ -69,19 +69,19 @@
           </a>
         </li>
         <li>
-            <a href="{{ url('reservations')}}" class="nav-link">
+            <a href="{{ url('Reservations')}}" class="nav-link">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
               Reservations
             </a>
         </li>
         <li>
-            <a href="{{ url('clients')}}" class="nav-link">
+            <a href="{{ url('Clients')}}" class="nav-link">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
               Clients
             </a>
         </li>
         <li>
-            <a href="{{ url('chambers')}}" class="nav-link">
+            <a href="{{ url('Chambers')}}" class="nav-link">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
               Chambers
             </a>

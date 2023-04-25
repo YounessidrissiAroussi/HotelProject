@@ -3,7 +3,7 @@
     <div class="row mt-3">
         <div class="row mt-3">
             <div class="col-lg-1">
-                <a class="btn btn-success" href="{{ url('reservations/create')}}">+</a>
+                <a class="btn btn-success" href="{{ url('Reservations/create')}}">+</a>
             </div>
             <div class="col-lg-8">
                 <h3>List des Reservations</h3>
@@ -46,14 +46,14 @@
                     <td >{{ $a->status }}</td>
                     <td >{{ $a->client_Nom }}</td>
 
-                    <td style="height: 20px">
-                        <form action="{{ url('reservations/'. $a->id) }}" method="POST">
+                    <td style="height: 20px" >
+                        <form action="{{ url('Reservations/'. $a->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <a href="{{url('reservations/'. $a->id) }}"><i class="fa fa-eye" style="color:black" ></i></a>
-                            <a href="{{url('reservations/'. $a->id .'/edit') }}"><i class="fa fa-edit" style="color:rgb(4, 12, 249)" ></i></a>
-                            <button class="border-0 bg-transparent text-danger" type="submit"><i class="fas fa-trash-alt"></i></button>
-                            <a href="{{url('clients/'. $a->Client_id .'/edit') }}"><i class="fas fa-sync-alt" style="color:rgb(37, 237, 23)" ></i></a>
+                            <a href="{{url('Reservations/'. $a->id) }}"><i class="fa fa-eye text-info"  ></i></a>
+                            <a href="{{url('Reservations/'. $a->id .'/edit') }}"><i class="fa fa-edit text-warning" ></i></a>
+                            <button class="border-0 mx-0 px-0 bg-transparent text-danger" type="submit"><i class="fas fa-trash-alt"></i></button>
+                            {{-- <a href="{{url('clients/'. $a->Client_id .'/edit') }}"><i class="fas fa-sync-alt" style="color:rgb(37, 237, 23)" ></i></a> --}}
                         </form>
                     </td>
                 </tr>

@@ -24,6 +24,8 @@ class ReservationsController extends Controller
             ->join('Clients', 'Reservations.Client_id', '=', 'Clients.id')
             ->select('Reservations.*', 'Clients.Nom as client_Nom')
             ->get();
+            // $Reservations = Reservations::all();
+
         }
         return view('reservations.index',compact('Reservations'));
     }
@@ -84,17 +86,14 @@ class ReservationsController extends Controller
     {
         $updateData = Reservations::find($id);
         $updateData->update($request->all());
-        return redirect("reservations")->with('success', 'Reservations modifié avec succès');
+        return redirect("/Reservations")->with('success', 'Reservations modifié avec succès');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     */
+    
     public function destroy(Request $request, $id)
     {
         $updateData = Reservations::find($id);
         $updateData->delete($request->all());
-        return redirect('/reservations')->with('success','Reservations supprimer avec succès');
+        return redirect('/Reservations')->with('success','Reservations supprimer avec succès');
     }
     public function delete(Request $request, $id)
     {

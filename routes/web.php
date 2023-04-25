@@ -41,34 +41,36 @@ Route::controller(homeController::class)->group(function(){
 });
 
 Route::controller(ReservationsController::class)->group(function(){
-    Route::get('/reservations', 'index');
-    Route::get('/reservations/create', 'create');
-    Route::get('/reservations/{id}', 'show');
-    Route::get('/reservations/{id}/edit', 'edit');
-    Route::post('/reservations', 'store');
-    Route::patch('/reservations/{id}', 'update');
-    Route::delete('/reservations/{id}', 'destroy');
+    Route::get('/Reservations', 'index');
+    Route::get('/Reservations/create', 'create');
+    Route::get('/Reservations/{id}', 'show');
+    Route::get('/Reservations/{id}/edit', 'edit');
+    Route::post('/Reservations', 'store');
+    Route::patch('/Reservations/{id}', 'update');
+    Route::delete('/Reservations/{id}', 'destroy');
+
+    
 // ****************************************************************
     Route::post('/Reserver', 'add');
     Route::get('/Reserver', 'ajouter');
-    Route::patch('/reservations/{id}/valide', 'valide');
-    Route::delete('/reservations/{id}/delete', 'delete');
+    Route::patch('/Reservations/{id}/valide', 'valide');
+    Route::delete('/Reservations/{id}/delete', 'delete');
 
 
 });
 
 Route::controller(ClientsController::class)->group(function () {
-    Route::get('/clients', 'index');
-    Route::get('/clients/create', 'create');
-    Route::get('/clients/{id}', 'show');
-    Route::get('/clients/{id}/edit', 'edit');
-    Route::post('/clients', 'store');
-    Route::patch('/clients/{id}', 'update');
-    Route::delete('/clients/{id}', 'destroy');
+    Route::get('/Clients', 'index');
+    Route::get('/Clients/create', 'create');
+    Route::get('/Clients/{id}', 'show');
+    Route::get('/Clients/{id}/edit', 'edit');
+    Route::post('/Clients', 'store');
+    Route::patch('/Clients/{id}', 'update');
+    Route::delete('/Clients/{id}', 'destroy');
 });
 
 Route::controller(ChambersController::class)->group(function () {
-    Route::get('/chambers', 'index');
+    Route::get('/Chambers', 'index');
     Route::get('/chambers/create', 'create');
     Route::get('/chambers/{id}', 'show');
     Route::get('/chambers/{id}/edit', 'edit');

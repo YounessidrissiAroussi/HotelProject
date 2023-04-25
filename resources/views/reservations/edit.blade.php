@@ -4,7 +4,7 @@
     {{-- <h1>Modifier adherent</h1> --}}
     <div class="row mt-3">
         <div class="col-lg-1">
-            <a class="btn btn-success " href="{{ url('reservations')}}"><i class="fas fa-arrow-circle-left" style="color:black"></i></a>
+            <a class="btn btn-success " href="{{ url('Reservations')}}"><i class="fas fa-arrow-circle-left" style="color:black"></i></a>
         </div>
         <div class="col-lg-11">
             <p align="center"><b>Modifier Reservations</b></p>
@@ -20,7 +20,7 @@
             </ul>
         </div>
     @endif
-    <form class="d-flex flex-column" method="post" action="{{ url('reservations/'. $Reservations->id) }}" >
+    <form class="d-flex flex-column" method="post" action="{{ url('Reservations/'. $Reservations->id) }}" >
         @method('PATCH')
         @csrf
         <div class="form-group mb-3">

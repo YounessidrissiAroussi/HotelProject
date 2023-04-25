@@ -45,17 +45,17 @@
                                             </td>
                                             <td >{{ $a->DateDepart }}</td>
                                             <td class="d-flex ">
-                                                <form action="{{url('reservations/'. $a->id.'/valide') }}" method="post">
+                                                <form action="{{url('Reservations/'. $a->id.'/valide') }}" method="post">
                                                     @method('PATCH')
                                                     @csrf
                                                     <button class="border-0 bg-transparent" type="submit"><i class="fas fa-paperclip"></i></button>
                                                 </form>
-                                                <form action="{{url('reservations/'. $a->id.'/delete') }}" method="post">
+                                                <form action="{{url('Reservations/'. $a->id.'/delete') }}" method="post">
                                                     @method('DELETE')
                                                     @csrf
                                                     <button class="border-0 bg-transparent" type="submit"><i class="fas fa-trash-alt"></i></button>
                                                 </form>
-                                                <a href="{{url('clients/'. $a->Client_id.'/edit') }}"><i class="fa fa-eye" style="color:black" ></i></a>
+                                                <a href="{{url('Clients/'. $a->Client_id.'/edit') }}"><i class="fa fa-eye" style="color:black" ></i></a>
                                             </td>
                                         </tr>
                                         @endforeach
@@ -124,9 +124,7 @@
       document.getElementById('myChart'),
       config
     );
-</script>
 
-<script type="text/javascript">
       var labels =  {{ Js::from($labelss) }};
       var users =  {{ Js::from($dataa) }};
       const data1 = {

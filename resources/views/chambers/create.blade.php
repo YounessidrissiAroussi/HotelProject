@@ -63,8 +63,8 @@
 
             <div class="form-group mb-3">
                 <label for="images">Images:</label>
-                    <input type="file" class="form-control bg-transparent" name="images[]" placeholder="images" multiple  value="{{old('images')}}">
-                    @error('images')
+                    <input type="file" class="form-control bg-transparent" name="url[]" placeholder="images" multiple  value="{{old('url')}}">
+                    @error('url')
                     <div class="text-danger">
                           {{$message}}
                     </div>
