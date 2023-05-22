@@ -62,7 +62,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="position-relative">
-                            <img class="img-fluid" src="img/room-1.jpg" alt="">
+                            <img class="img-fluid" src="img/carousel-1.jpg" alt="">
                             <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
                         </div>
                         <div class="p-4 mt-2">
@@ -92,7 +92,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="position-relative">
-                            <img class="img-fluid" src="img/room-2.jpg" alt="">
+                            <img class="img-fluid" src="img/carousel-1.jpg" alt="">
                             <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
                         </div>
                         <div class="p-4 mt-2">
@@ -122,7 +122,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="position-relative">
-                            <img class="img-fluid" src="img/room-3.jpg" alt="">
+                            <img class="img-fluid" src="img/carousel-1.jpg" alt="">
                             <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
                         </div>
                         <div class="p-4 mt-2">
@@ -152,7 +152,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="position-relative">
-                            <img class="img-fluid" src="img/room-3.jpg" alt="">
+                            <img class="img-fluid" src="img/carousel-1.jpg" alt="">
                             <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
                         </div>
                         <div class="p-4 mt-2">
@@ -182,7 +182,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="position-relative">
-                            <img class="img-fluid" src="img/room-1.jpg" alt="">
+                            <img class="img-fluid" src="img/carousel-1.jpg" alt="">
                             <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
                         </div>
                         <div class="p-4 mt-2">
@@ -212,7 +212,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="position-relative">
-                            <img class="img-fluid" src="img/room-2.jpg" alt="">
+                            <img class="img-fluid" src="img/carousel-1.jpg" alt="">
                             <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
                         </div>
                         <div class="p-4 mt-2">

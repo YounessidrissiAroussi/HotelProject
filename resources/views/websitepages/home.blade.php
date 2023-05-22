@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                <img class="w-100" src="img/carousel-1.jpg" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 700px;">
                         <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Profitez d'un meilleur moment</h6>
@@ -118,16 +118,16 @@ fonctionnel et confort,  La Chambotte est idéalement situé au cœur de la vill
             <div class="col-lg-6">
                 <div class="row g-3">
                     <div class="col-6 text-end">
-                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg" style="margin-top: 25%;">
+                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/carousel-1.jpg" style="margin-top: 25%;">
                     </div>
                     <div class="col-6 text-start">
-                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg">
+                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/carousel-1.jpg">
                     </div>
                     <div class="col-6 text-end">
-                        <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg">
+                        <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/carousel-1.jpg">
                     </div>
                     <div class="col-6 text-start">
-                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg">
+                        <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/carousel-1.jpg">
                     </div>
                 </div>
             </div>
@@ -146,7 +146,7 @@ fonctionnel et confort,  La Chambotte est idéalement situé au cœur de la vill
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="room-item shadow rounded overflow-hidden">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/room-1.jpg" alt="">
+                        <img class="img-fluid" src="img/carousel-1.jpg" alt="">
                         <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
                     </div>
                     <div class="p-4 mt-2">
@@ -176,7 +176,7 @@ fonctionnel et confort,  La Chambotte est idéalement situé au cœur de la vill
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="room-item shadow rounded overflow-hidden">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/room-2.jpg" alt="">
+                        <img class="img-fluid" src="img/carousel-1.jpg" alt="">
                         <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
                     </div>
                     <div class="p-4 mt-2">
@@ -206,7 +206,7 @@ fonctionnel et confort,  La Chambotte est idéalement situé au cœur de la vill
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                 <div class="room-item shadow rounded overflow-hidden">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/room-3.jpg" alt="">
+                        <img class="img-fluid" src="img/carousel-1.jpg" alt="">
                         <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small>
                     </div>
                     <div class="p-4 mt-2">
