@@ -27,7 +27,7 @@
                 <th>Prix:</th>
                 <td>{{ $chambers->prix }}</td>
             </tr>
-            <tr>
+            {{-- <tr>
                 <th>Images:</th>
                 <td>
                     <div class="col-lg-12">
@@ -36,7 +36,7 @@
                         @endforeach
                     </div>
                 </td>
-            </tr>
+            </tr> --}}
         </table>
     </div>
 @endsection

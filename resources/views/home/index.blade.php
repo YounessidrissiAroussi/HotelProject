@@ -9,7 +9,7 @@
         </div>
         <div class="col-lg-3"></div>
         <div class="col-lg-4 text-center">
-            <h3 class="text-body">{{ \Carbon\Carbon::now()->format('D-d-M-Y') }}</h3>
+            <h3 class="text-body">{{ \Carbon\Carbon::now()->format('d-m-Y') }}</h3>
         </div>
         <hr>
     </div>
@@ -69,7 +69,7 @@
                     <div class="col-lg-12">
                         <div class="card shadow-sm border" style="border-radius: 0.5rem">
                             <div class="card-body text-center">
-                                <canvas id="myChart1" height="180px"></canvas>
+                                <canvas id="myChart1" class="chart-canvas" height="180px"></canvas>
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
     const data = {
       labels: labels,
       datasets: [{
-        label: 'Reservations',
+        label: 'Reservations du mois actuel',
         backgroundColor: 'rgb(0, 153, 204)',
         borderColor: 'rgb(255, 99, 132)',
         data: users,
@@ -130,7 +130,7 @@
       const data1 = {
         labels: labels,
         datasets: [{
-          label: 'Clients',
+          label: 'Clients du mois actuel',
           backgroundColor: 'rgb(51, 51, 255)',
           borderColor: 'rgb(0, 255, 0)',
           data: users,

@@ -78,10 +78,11 @@ class ChambersController extends Controller
     public function destroy(Request $request, $id)
     {
         $chambers = Chambers::find($id);
-                foreach($chambers->images as $image){
-                 $chambers->delete();
-                File::delete('storage/'.$image->url);  
-            }
-            return redirect('/Chambers')->with('success','Chambers supprimer avec succès');
+            //     foreach($chambers->images as $image){
+            //     $chambers->delete();
+            //     File::delete('storage/'.$image->url);
+            // }
+        $chambers->delete();
+        return redirect('/Chambers')->with('success','Chambers supprimer avec succès');
     }
 }

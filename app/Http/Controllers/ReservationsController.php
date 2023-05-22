@@ -88,7 +88,7 @@ class ReservationsController extends Controller
         $updateData->update($request->all());
         return redirect("/Reservations")->with('success', 'Reservations modifié avec succès');
     }
-    
+
     public function destroy(Request $request, $id)
     {
         $updateData = Reservations::find($id);

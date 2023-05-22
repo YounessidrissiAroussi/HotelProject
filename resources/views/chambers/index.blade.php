@@ -34,7 +34,7 @@
                     <th>titre</th>
                     <th>Description</th>
                     <th>prix</th>
-                    <th>images</th>
+                    {{-- <th>images</th> --}}
                     <th class="text-center">Actions</th>
                 </tr>
                 @foreach ($chambers as $index => $chamber)
@@ -44,9 +44,9 @@
                     <td >{{ $chamber->titre }}</td>
                     <td>{{ $chamber->Description }}</td>
                     <td >{{ $chamber->prix }}</td>
-                    <td>
+                    {{-- <td>
                         {{count($chamber->images)}} images
-                    </td>
+                    </td> --}}
                     <td class="text-center">
                         <form action="{{ url('chambers/'. $chamber->id) }}" method="POST">
                             @csrf
