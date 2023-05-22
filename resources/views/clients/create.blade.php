@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row mt-3">
             <div class="col-lg-1">
-                <a class="btn btn-success" href="{{ url('clients')}}"><i class="fas fa-arrow-circle-left" style="color:black"></i></a>
+                <a class="btn btn-success" href="{{ url('/Clients')}}"><i class="fas fa-arrow-circle-left" style="color:black"></i></a>
             </div>
             <div class="col-lg-11">
                 <p align="center"><b>Ajouter un Client</b></p>
@@ -13,12 +13,12 @@
             <div class="alert alert-danger">
                 <ul>
                     @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
+                         <li>{{ $error }}</li>
                     @endforeach
                 </ul>
             </div>
         @endif
-        <form class="d-flex flex-column" action="{{ url('clients') }}" method="POST">
+        <form class="d-flex flex-column" action="{{ url('/Clients') }}" method="POST">
             @csrf
             <div class="form-group mb-3">
                 <label for="cin">Cin:</label>

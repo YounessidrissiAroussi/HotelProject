@@ -26,7 +26,7 @@ class ClientsController extends Controller
     public function store(Request $request)
     {
         Clients::create($request->all());
-        return redirect('/clients')->with('success', 'Clients Bien Ajouté ');
+        return redirect('/Clients')->with('success', 'Clients à Bien Ajouté ');
     }
 
 

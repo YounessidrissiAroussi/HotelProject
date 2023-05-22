@@ -45,7 +45,7 @@ class ReservationsController extends Controller
     public function store(Request $request)
     {
         Reservations::create($request->all());
-        return redirect('/reservations')->with('success', 'Reservations Bien Ajouté ');
+        return redirect('/Reservations')->with('success', 'Reservations Bien Ajouté ');
     }
 
     public function add(StoreReservationsRequest $request)

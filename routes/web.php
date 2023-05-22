@@ -46,13 +46,29 @@ Route::post('register', [RegisteredUserController::class, 'store']);
     Route::controller(homeController::class)->group(function(){
         Route::get('/home', 'index');
     });
-    Route::resource('Clients',ClientsController::class);
-    // Route::resource('Chambers',ChambersController::class);
-    Route::resource('Reservations',ReservationsController::class);
+        Route::controller(ClientsController::class)->group(function () {
+        Route::get('/Clients', 'index');
+        Route::get('/Clients/create', 'create');
+        Route::get('/Clients/{id}', 'show');
+        Route::get('/Clients/{id}/edit', 'edit');
+        Route::post('/Clients', 'store');
+        Route::patch('/Clients/{id}', 'update');
+        Route::delete('/Clients/{id}', 'destroy');
+    });
     Route::controller(ReservationsController::class)->group(function(){
+        Route::get('/Reservations', 'index');
+        Route::get('/Reservations/create', 'create');
+        Route::get('/Reservations/{id}', 'show');
+        Route::get('/Reservations/{id}/edit', 'edit');
+        Route::post('/Reservations', 'store');
+        Route::patch('/Reservations/{id}', 'update');
+        Route::delete('/Reservations/{id}', 'destroy');
+
+    // ****************************************************************
         Route::patch('/Reservations/{id}/valide', 'valide');
         Route::delete('/Reservations/{id}/delete', 'delete');
     });
+
 });
 Route::controller(ReservationsController::class)->group(function(){
     Route::post('/Reserver', 'add');
@@ -60,51 +76,3 @@ Route::controller(ReservationsController::class)->group(function(){
 });
 require __DIR__.'/auth.php';
 
-
-// Route::get('/dashboard', function () {
-//     return view('home.index');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
-// Route::middleware('auth')->group(function () {
-//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
-//     Route::controller(homeController::class)->group(function(){
-//         Route::get('/home', 'index');
-//     });
-
-//     Route::controller(ClientsController::class)->group(function () {
-//         Route::get('/Clients', 'index');
-//         Route::get('/Clients/create', 'create');
-//         Route::get('/Clients/{id}', 'show');
-//         Route::get('/Clients/{id}/edit', 'edit');
-//         Route::post('/Clients', 'store');
-//         Route::patch('/Clients/{id}', 'update');
-//         Route::delete('/Clients/{id}', 'destroy');
-//     });
-
-
-
-//     Route::controller(ReservationsController::class)->group(function(){
-//         Route::get('/Reservations', 'index');
-//         Route::get('/Reservations/create', 'create');
-//         Route::get('/Reservations/{id}', 'show');
-//         Route::get('/Reservations/{id}/edit', 'edit');
-//         Route::post('/Reservations', 'store');
-//         Route::patch('/Reservations/{id}', 'update');
-//         Route::delete('/Reservations/{id}', 'destroy');
-
-//     // ****************************************************************
-//         Route::patch('/Reservations/{id}/valide', 'valide');
-//         Route::delete('/Reservations/{id}/delete', 'delete');
-//     });
-// });
-
-// Route::controller(ReservationsController::class)->group(function(){
-//     Route::post('/Reserver', 'add');
-//     Route::get('/Reserver', 'ajouter');
-// });
-
-
-// require __DIR__.'/auth.php';
